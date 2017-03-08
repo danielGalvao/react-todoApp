@@ -5,7 +5,7 @@ const express = require('express');
 
 const server = express();
 
-server.user(bodyParser.urlencoded({ extended: true }));
+server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
 
 server.listen(port, function(){
