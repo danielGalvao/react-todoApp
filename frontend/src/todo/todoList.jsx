@@ -8,12 +8,8 @@ export default props => {
       <tr key={todo._id}>
         <td className={todo.done ? 'markAsDone' : ''}>{todo.description}</td>
         <td>
-          <IconButton style='success' hide={todo.done} icon='check' onClick={() => props.handleMarkAsDone(todo)}></IconButton>
-        </td>
-        <td>
-          <IconButton style='warning' icon='undo' onClick={() => props.handleMarkAsPending(todo)}></IconButton>
-        </td>
-        <td>
+          <IconButton style='success' hide={todo.done}  icon='check' onClick={() => props.handleMarkAsDone(todo)}></IconButton>
+          <IconButton style='warning' hide={!todo.done} icon='undo' onClick={() => props.handleMarkAsPending(todo)}></IconButton>
           <IconButton style='danger' icon='trash-o' onClick={() => props.handleRemove(todo)}></IconButton>
         </td>
       </tr>
