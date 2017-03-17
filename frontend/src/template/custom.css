@@ -20,5 +20,9 @@ td + td {
 table {
   margin-top: 30px;
   clear: both;
-display: inline-table;
+  display: inline-table;
+}
+
+thead th + th {
+  text-align: center;
 }
