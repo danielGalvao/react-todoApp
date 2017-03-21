@@ -22,3 +22,7 @@ table {
   clear: both;
   display: inline-table;
 }
+
+thead th + th {
+  text-align: center;
+}
